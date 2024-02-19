@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Chatroom</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="chat-container">
+		<div class="sidebar">
+			<div class="name-input">
+				<input type="text" id="name" placeholder="Enter your name">
+				<button onclick="setName()">Enter</button>
+			</div>
+			<button onclick="openProfileModal()">Profile</button>
+			<div class="online-users">
+				<h3>Online Users</h3>
+				<ul id="online-users">
+					<!-- Online users will be displayed here -->
+				</ul>
+			</div>
+		</div>
+		<div class="chat-window">
+			<div class="chat-messages" id="chat-messages">
+				<!-- Chat messages will be displayed here -->
+			</div>
+			<input type="text" id="message-input" placeholder="Type your message...">
+			<button onclick="sendMessage()">Send</button>
+		
+		</div>
+	</div>
+
+	<div id="profileModal" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeProfileModal()">&times;</span>
+			<h2>Edit Profile</h2>
+			<input type="text" id="editName" placeholder="Enter your new name">
+			<button onclick="saveProfile()">Save</button>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
